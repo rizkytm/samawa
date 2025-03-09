@@ -4,7 +4,7 @@ import Logo from '@/assets/images/logo-samawa.svg';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-type Props = {};
+type Props = object;
 
 function Header({}: Props) {
   const pathname = usePathname();

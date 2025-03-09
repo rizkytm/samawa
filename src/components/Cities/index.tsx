@@ -17,11 +17,6 @@ function Content({ data }: { data: TCity[] }) {
             className="flex border border-transparent hover:border-color2 transition-colors duration-300 bg-light1 p-5 rounded-3xl items-center gap-x-5 relative"
           >
             <span className="relative w-[80px] aspect-square rounded-3xl overflow-hidden">
-              {/* <img
-                  src="/images/image 5.png"
-                  alt="wedding 2"
-                  class="w-full h-full object-cover absolute"
-                /> */}
               <Image
                 fill
                 className="w-full h-full object-cover object-center"
@@ -52,7 +47,6 @@ function Content({ data }: { data: TCity[] }) {
 
 async function Cities({}: Props) {
   const { data }: { data: TCity[] } = await getData();
-  console.log(data);
 
   if (data.length === 0) {
     return 'No Data';

@@ -4,7 +4,7 @@ import { getData } from './actions';
 import Slider from '@/components/Slider';
 import Popular from '@/assets/images/popular.svg';
 import Pinpoint from '@/assets/images/pinpoint.svg';
-import HomeTown from '@/assets/images/hometown.svg';
+// import HomeTown from '@/assets/images/hometown.svg';
 import Image from 'next/image';
 import thousands from '@/libs/thousands';
 import Link from 'next/link';
@@ -52,10 +52,10 @@ function WeddingPackageSlider({ data }: { data: TPackage[] }) {
                     <Pinpoint />
                     {slide.city.name}
                   </span>
-                  <span className="flex gap-x-2 items-center">
+                  {/* <span className="flex gap-x-2 items-center">
                     <HomeTown />
                     Tentram
-                  </span>
+                  </span> */}
                 </span>
                 <Link
                   href={`${process.env.HOST_APP}/packages/${slide.slug}`}
@@ -77,7 +77,6 @@ async function WeddingPackagesWrapper({
   type,
 }: PropsWeddingPackagesWrapper) {
   const { data }: { data: TPackage[] } = await getData(show);
-  console.log(data);
 
   if (type === 'grid') {
     return <div className="">Grid</div>;
